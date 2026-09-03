@@ -3,451 +3,419 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#7f1020" />
+  <meta name="theme-color" content="#6b0f1a" />
+  <meta name="description" content="Santa Larry brings professional real-bearded Santa visits, events, photos, deliveries and virtual experiences to Winston-Salem, Greensboro, High Point and surrounding Piedmont Triad communities." />
   <title>Santa Larry | Piedmont Triad Santa Visits</title>
-  <meta name="description" content="Santa Larry brings professional Santa visits, events, photos and virtual experiences to Winston-Salem, Greensboro, High Point and surrounding Piedmont Triad communities." />
   <style>
     :root {
-      --red: #8f1324;
-      --red-dark: #5f0b16;
-      --green: #173f2c;
-      --green-2: #24563f;
-      --gold: #d8ad52;
-      --cream: #fff7e8;
+      --scarlet: #7d1220;
+      --scarlet-dark: #560a13;
+      --scarlet-soft: #9d2634;
+      --green: #173d2b;
+      --green-light: #285640;
+      --gold: #d8ae57;
+      --gold-light: #f1d797;
+      --cream: #fff8e9;
       --paper: #fffdf8;
-      --ink: #251d19;
-      --muted: #6e625d;
-      --shadow: 0 16px 40px rgba(38, 18, 14, 0.16);
+      --ink: #28201c;
+      --muted: #6f625b;
+      --line: #eadcc7;
+      --shadow: 0 18px 48px rgba(59, 27, 17, .14);
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Georgia, 'Times New Roman', serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background: linear-gradient(180deg, #fffaf2 0%, #fffdf8 100%);
-      padding-bottom: 76px;
+      background: var(--paper);
+      padding-bottom: 78px;
     }
-
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    img { display: block; width: 100%; }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: rgba(95, 11, 22, 0.96);
+      z-index: 50;
+      background: rgba(86, 10, 19, .97);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,.16);
+      border-bottom: 1px solid rgba(255,255,255,.12);
     }
-
     .topbar-inner {
-      max-width: 1100px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 12px 18px;
+      min-height: 58px;
+      padding: 10px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
     }
-
     .brand {
+      font-family: Georgia, 'Times New Roman', serif;
       color: white;
+      font-size: 1.25rem;
       font-weight: 800;
-      letter-spacing: .03em;
-      font-size: 1.1rem;
+      letter-spacing: .02em;
     }
-    .brand span { color: var(--gold); }
-
+    .brand span { color: var(--gold); font-style: italic; }
     .top-call {
-      border: 1px solid rgba(255,255,255,.32);
       color: white;
+      border: 1px solid rgba(255,255,255,.35);
       border-radius: 999px;
-      padding: 8px 12px;
-      font: 700 .82rem Arial, sans-serif;
+      padding: 9px 13px;
+      font-size: .78rem;
+      font-weight: 800;
     }
 
     .hero {
-      background:
-        radial-gradient(circle at 85% 10%, rgba(216,173,82,.20), transparent 30%),
-        linear-gradient(145deg, var(--red-dark), var(--red) 55%, #a62534);
       color: white;
+      background:
+        radial-gradient(circle at 85% 8%, rgba(216,174,87,.24), transparent 28%),
+        linear-gradient(145deg, var(--scarlet-dark), var(--scarlet) 56%, var(--scarlet-soft));
       overflow: hidden;
     }
-
     .hero-inner {
-      max-width: 1100px;
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 28px 18px 32px;
+      padding: 24px 18px 32px;
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
+      gap: 24px;
       align-items: center;
     }
-
     .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      font: 700 .72rem Arial, sans-serif;
-      color: #f7d98f;
       margin-bottom: 10px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: .17em;
+      font-size: .72rem;
+      font-weight: 800;
     }
-
+    h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
     h1 {
       margin: 0;
-      font-size: clamp(2.5rem, 11vw, 5rem);
-      line-height: .92;
-      letter-spacing: -.035em;
+      font-size: clamp(2.8rem, 13vw, 5.4rem);
+      line-height: .9;
+      letter-spacing: -.045em;
     }
-
-    .hero h1 span {
+    h1 span {
       display: block;
+      margin-top: 12px;
       color: var(--gold);
+      font-size: .5em;
       font-style: italic;
-      font-size: .58em;
-      margin-top: 10px;
       letter-spacing: 0;
+      line-height: 1.1;
     }
-
-    .hero p {
-      margin: 16px 0 0;
-      font: 400 1rem/1.6 Arial, sans-serif;
+    .hero-copy {
+      max-width: 650px;
+      margin: 18px 0 0;
       color: rgba(255,255,255,.9);
-      max-width: 640px;
+      font-size: 1rem;
+      line-height: 1.65;
     }
-
     .hero-actions {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
-
     .btn {
+      min-height: 50px;
+      border-radius: 15px;
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      min-height: 48px;
-      border-radius: 14px;
-      padding: 12px 15px;
-      font: 800 .9rem Arial, sans-serif;
+      justify-content: center;
+      text-align: center;
+      padding: 12px 14px;
+      font-size: .86rem;
+      font-weight: 900;
       letter-spacing: .02em;
       transition: transform .2s ease, box-shadow .2s ease;
     }
-
     .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--gold); color: #3a2413; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
-    .btn-secondary { border: 1px solid rgba(255,255,255,.38); color: white; background: rgba(255,255,255,.08); }
+    .btn-primary { background: var(--gold); color: #342310; box-shadow: 0 12px 26px rgba(0,0,0,.18); }
+    .btn-secondary { color: white; border: 1px solid rgba(255,255,255,.38); background: rgba(255,255,255,.08); }
 
-    .photo-placeholder {
-      min-height: 330px;
+    .hero-photo-wrap {
+      position: relative;
       border-radius: 28px;
-      border: 2px dashed rgba(255,255,255,.35);
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 22px;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.05);
+      overflow: hidden;
+      box-shadow: 0 22px 50px rgba(27,7,10,.28);
+      border: 2px solid rgba(255,255,255,.2);
+      background: #2b1b18;
     }
-
-    .photo-placeholder strong {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 8px;
-      color: #fff2c7;
+    .hero-photo {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      object-position: center;
     }
-
-    .photo-placeholder small {
-      font: .9rem/1.5 Arial, sans-serif;
-      color: rgba(255,255,255,.72);
-      max-width: 270px;
-    }
-
-    .trust-strip {
-      background: var(--green);
+    .hero-badge {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(23,61,43,.93);
       color: white;
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      font-weight: 800;
+      font-size: .82rem;
+      line-height: 1.4;
     }
+    .hero-badge span { color: var(--gold-light); }
 
-    .trust-inner {
-      max-width: 1100px;
+    .quick-strip { background: var(--green); color: white; }
+    .quick-inner {
+      max-width: 1160px;
       margin: 0 auto;
-      padding: 15px 18px;
+      padding: 14px 18px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 8px;
       text-align: center;
     }
+    .quick-item { font-size: .7rem; line-height: 1.3; font-weight: 800; }
+    .quick-item b { display: block; color: var(--gold); font-size: .98rem; margin-bottom: 3px; }
 
-    .trust-item {
-      font: 700 .72rem/1.3 Arial, sans-serif;
-      color: rgba(255,255,255,.92);
-    }
-    .trust-item b { color: var(--gold); display: block; font-size: 1rem; margin-bottom: 3px; }
-
-    section { padding: 54px 18px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-
-    .section-kicker {
+    section { padding: 56px 18px; scroll-margin-top: 62px; }
+    .section-inner { max-width: 1160px; margin: 0 auto; }
+    .kicker {
       margin: 0 0 8px;
-      color: var(--red);
+      color: var(--scarlet);
       text-transform: uppercase;
-      font: 800 .72rem Arial, sans-serif;
       letter-spacing: .16em;
+      font-size: .72rem;
+      font-weight: 900;
     }
-
     h2 {
       margin: 0;
-      font-size: clamp(2rem, 8vw, 3.6rem);
-      line-height: 1;
       color: var(--green);
-      letter-spacing: -.025em;
+      font-size: clamp(2rem, 9vw, 3.8rem);
+      line-height: 1;
+      letter-spacing: -.03em;
     }
-
-    .section-intro {
-      max-width: 680px;
-      color: var(--muted);
-      font: 1rem/1.7 Arial, sans-serif;
+    .intro {
+      max-width: 720px;
       margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     .services-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 12px;
-      margin-top: 26px;
+      margin-top: 28px;
     }
-
     .service-card {
       background: white;
-      border: 1px solid #eee3d2;
+      border: 1px solid var(--line);
       border-radius: 20px;
       padding: 18px 15px;
-      box-shadow: 0 8px 24px rgba(74,45,27,.07);
-      min-height: 145px;
+      box-shadow: 0 9px 28px rgba(72,43,25,.07);
+      min-height: 154px;
     }
-
     .service-icon {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
       border-radius: 12px;
-      display: grid;
-      place-items: center;
       background: #f7ead3;
-      color: var(--red);
-      font-size: 1.1rem;
+      color: var(--scarlet);
       margin-bottom: 12px;
+      font-size: 1.15rem;
     }
+    .service-card h3 { margin: 0 0 7px; color: var(--green); font-size: 1.03rem; line-height: 1.2; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .83rem; line-height: 1.5; }
 
-    .service-card h3 {
-      margin: 0 0 7px;
-      color: var(--green);
-      font-size: 1.05rem;
-      line-height: 1.15;
-    }
-
-    .service-card p {
-      margin: 0;
-      color: var(--muted);
-      font: .84rem/1.5 Arial, sans-serif;
-    }
-
-    .about {
-      background: #f6efe2;
-    }
-
-    .about-grid {
-      display: grid;
-      gap: 22px;
-      align-items: center;
-    }
-
+    .about { background: #f6efe2; }
+    .about-grid { display: grid; gap: 25px; align-items: center; }
     .about-photo {
-      min-height: 300px;
-      border-radius: 24px;
-      background: linear-gradient(145deg, #2a5b44, #173f2c);
-      color: white;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 24px;
-    }
-
-    .about-photo span {
-      font: 700 .95rem/1.5 Arial, sans-serif;
-      color: rgba(255,255,255,.8);
-      max-width: 260px;
-    }
-
-    .about-copy p {
-      color: #4f4743;
-      font: 1rem/1.75 Arial, sans-serif;
-    }
-
-    .cred-card {
-      margin-top: 24px;
-      padding: 22px;
-      border-radius: 22px;
-      background: white;
-      border: 1px solid #eadbc3;
+      height: 390px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 26px;
       box-shadow: var(--shadow);
     }
-
-    .cred-card h3 { margin: 0 0 12px; color: var(--red); }
-    .cred-list {
-      display: grid;
-      gap: 10px;
-      font: .93rem/1.5 Arial, sans-serif;
-      color: #493f39;
-    }
-
-    .cred-list div {
+    .about-copy p { color: #514943; font-size: 1rem; line-height: 1.75; }
+    .mini-points { display: grid; gap: 10px; margin-top: 20px; }
+    .mini-point {
       display: flex;
       gap: 10px;
       align-items: flex-start;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.7);
+      border: 1px solid #eadbc5;
+      font-size: .9rem;
+      line-height: 1.45;
     }
-    .cred-list b { color: var(--green); }
+    .mini-point b { color: var(--scarlet); }
 
+    .gallery { background: var(--paper); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+      margin-top: 28px;
+    }
+    .gallery-grid figure { margin: 0; overflow: hidden; border-radius: 18px; background: #eee3d5; }
+    .gallery-grid img { height: 225px; object-fit: cover; object-position: center; transition: transform .25s ease; }
+    .gallery-grid figure:hover img { transform: scale(1.025); }
+
+    .pricing-wrap { display: grid; gap: 18px; margin-top: 28px; }
     .pricing-card {
-      margin-top: 24px;
-      background: linear-gradient(145deg, var(--green), var(--green-2));
+      padding: 25px;
       border-radius: 26px;
-      padding: 26px;
+      background: linear-gradient(145deg, var(--green), var(--green-light));
       color: white;
       box-shadow: var(--shadow);
     }
-
-    .pricing-card h3 {
-      color: var(--gold);
-      margin: 0 0 8px;
-      font-size: 1.5rem;
-    }
-    .pricing-card .range {
-      font-size: 2.3rem;
-      font-weight: 800;
-      margin: 8px 0 10px;
-    }
-    .pricing-card p {
-      font: .95rem/1.65 Arial, sans-serif;
-      color: rgba(255,255,255,.86);
-      margin: 0;
-    }
-    .pricing-card strong { color: white; }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 24px;
-    }
-
-    .gallery-slot {
-      aspect-ratio: 4/5;
-      border-radius: 18px;
-      background: linear-gradient(145deg, #f2e4cf, #fffaf2);
-      border: 1px dashed #c6aa7a;
-      display: grid;
-      place-items: center;
-      text-align: center;
+    .pricing-card h3 { margin: 0 0 8px; color: var(--gold); font-size: 1.55rem; }
+    .price-range { margin: 8px 0 12px; font-family: Georgia, 'Times New Roman', serif; font-size: 2.5rem; font-weight: 800; }
+    .pricing-card p { margin: 0; color: rgba(255,255,255,.86); line-height: 1.65; font-size: .94rem; }
+    .retainer {
+      margin-top: 18px;
       padding: 14px;
-      color: #8a704a;
-      font: 700 .78rem/1.4 Arial, sans-serif;
-    }
-
-    .booking {
-      background: linear-gradient(145deg, #71101d, #9b1a2c);
+      border-radius: 15px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.17);
+      font-weight: 800;
       color: white;
     }
+    .area-card {
+      padding: 24px;
+      border-radius: 26px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 9px 28px rgba(72,43,25,.07);
+    }
+    .area-card h3 { margin: 0 0 10px; color: var(--scarlet); font-size: 1.45rem; }
+    .area-card p { margin: 0; color: var(--muted); line-height: 1.7; font-size: .94rem; }
 
+    .seasonal {
+      background:
+        linear-gradient(rgba(23,61,43,.9), rgba(23,61,43,.9)),
+        url('/santa%20larry%2012.png') center/cover;
+      color: white;
+    }
+    .seasonal .kicker { color: var(--gold-light); }
+    .seasonal h2 { color: white; }
+    .seasonal .intro { color: rgba(255,255,255,.84); }
+    .seasonal-card {
+      margin-top: 24px;
+      max-width: 720px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(4px);
+    }
+    .seasonal-card p { margin: 0; font-size: .95rem; line-height: 1.7; }
+
+    .booking {
+      color: white;
+      background: linear-gradient(145deg, var(--scarlet-dark), var(--scarlet-soft));
+    }
+    .booking .kicker { color: var(--gold-light); }
     .booking h2 { color: white; }
-    .booking .section-kicker { color: #f3cf83; }
-    .booking .section-intro { color: rgba(255,255,255,.83); }
-
+    .booking .intro { color: rgba(255,255,255,.84); }
     .booking-actions {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin-top: 24px;
+      margin-top: 26px;
     }
-
     .booking-actions a {
-      min-height: 52px;
-      border-radius: 15px;
+      min-height: 54px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 12px;
-      font: 800 .86rem Arial, sans-serif;
+      border-radius: 15px;
       background: white;
-      color: var(--red-dark);
+      color: var(--scarlet-dark);
+      font-size: .86rem;
+      font-weight: 900;
     }
-
-    .booking-actions a.gold { background: var(--gold); color: #3a2413; }
-
-    .service-area {
-      margin-top: 22px;
-      padding: 18px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 18px;
-      font: .9rem/1.6 Arial, sans-serif;
-      color: rgba(255,255,255,.82);
+    .booking-actions a.gold { background: var(--gold); color: #342310; }
+    .booking-note {
+      margin-top: 18px;
+      color: rgba(255,255,255,.78);
+      font-size: .82rem;
+      line-height: 1.55;
     }
 
     footer {
-      background: #1d2f27;
-      color: rgba(255,255,255,.78);
-      text-align: center;
       padding: 34px 18px 100px;
-      font: .84rem/1.7 Arial, sans-serif;
+      text-align: center;
+      background: #1d2f27;
+      color: rgba(255,255,255,.72);
+      font-size: .83rem;
+      line-height: 1.7;
     }
     footer strong { color: white; }
+    footer a { color: var(--gold-light); }
 
     .bottom-nav {
       position: fixed;
-      z-index: 50;
+      z-index: 60;
       left: 0;
       right: 0;
       bottom: 0;
-      min-height: 68px;
+      min-height: 70px;
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      padding: 7px 5px max(7px, env(safe-area-inset-bottom));
       background: rgba(255,253,248,.97);
       border-top: 1px solid #e5d8c4;
       box-shadow: 0 -8px 24px rgba(50,30,20,.09);
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      padding: 7px 6px max(7px, env(safe-area-inset-bottom));
     }
-
     .bottom-nav a {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 3px;
-      color: #5f554f;
-      font: 700 .65rem Arial, sans-serif;
+      color: #5e544e;
+      font-size: .64rem;
+      font-weight: 800;
     }
-    .bottom-nav b { color: var(--red); font-size: 1rem; }
+    .bottom-nav b { color: var(--scarlet); font-size: 1rem; }
 
     @media (min-width: 760px) {
       body { padding-bottom: 0; }
-      .hero-inner { grid-template-columns: 1.05fr .95fr; padding-top: 48px; padding-bottom: 48px; }
-      .photo-placeholder { min-height: 470px; }
-      .services-grid { grid-template-columns: repeat(4, 1fr); }
-      .about-grid { grid-template-columns: .85fr 1.15fr; }
-      .gallery-grid { grid-template-columns: repeat(4, 1fr); }
-      .booking-actions { grid-template-columns: repeat(4, 1fr); }
+      .hero-inner { grid-template-columns: 1.02fr .98fr; padding-top: 48px; padding-bottom: 48px; }
+      .hero-photo { height: 520px; }
+      .services-grid { grid-template-columns: repeat(4,1fr); }
+      .about-grid { grid-template-columns: .9fr 1.1fr; }
+      .gallery-grid { grid-template-columns: repeat(4,1fr); }
+      .gallery-grid img { height: 270px; }
+      .pricing-wrap { grid-template-columns: 1fr 1fr; }
+      .booking-actions { grid-template-columns: repeat(4,1fr); }
       .bottom-nav { display: none; }
       footer { padding-bottom: 36px; }
+    }
+
+    @media (min-width: 1100px) {
+      section { padding-top: 76px; padding-bottom: 76px; }
+      .gallery-grid { grid-template-columns: repeat(5,1fr); }
+      .gallery-grid img { height: 290px; }
     }
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Santa <span>Larry</span></div>
+      <a class="brand" href="#home">Santa <span>Larry</span></a>
       <a class="top-call" href="tel:+13364070764">Call 336-407-0764</a>
     </div>
   </header>
@@ -457,167 +425,144 @@
       <div class="hero-inner">
         <div>
           <div class="eyebrow">Professional Santa • Piedmont Triad, NC</div>
-          <h1>Santa Larry <span>The Magic of Christmas — Brought to You.</span></h1>
-          <p>Warm, memorable Santa experiences for homes, families, businesses, community events, photo sessions and special celebrations throughout the Piedmont Triad.</p>
+          <h1>Santa Larry<span>The Magic of Christmas — Brought to You</span></h1>
+          <p class="hero-copy">Warm, personal Santa visits for families, businesses, neighborhoods, senior communities, celebrations and special events throughout the Piedmont Triad.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#book">Book Santa</a>
+            <a class="btn btn-secondary" href="tel:+13364070764">Call Santa</a>
             <a class="btn btn-secondary" href="sms:+13364070764">Text Santa</a>
+            <a class="btn btn-secondary" href="mailto:Santa@goes2u.com">Email Santa</a>
           </div>
         </div>
-
-        <div class="photo-placeholder" aria-label="Santa Larry hero photo placeholder">
-          <div>
-            <strong>Santa Larry Photo</strong>
-            <small>Your original photo will go here exactly as supplied — no enhancement, retouching or AI editing.</small>
-          </div>
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="/santa%20larry%201.jpg" alt="Santa Larry" />
+          <div class="hero-badge"><span>Serving the Piedmont Triad</span><br />Winston-Salem • Greensboro • High Point • Surrounding Areas</div>
         </div>
       </div>
     </section>
 
-    <div class="trust-strip">
-      <div class="trust-inner">
-        <div class="trust-item"><b>Real Beard</b>Professional Santa</div>
-        <div class="trust-item"><b>Triad</b>Local Service Area</div>
-        <div class="trust-item"><b>50%</b>Retainer Holds Date</div>
+    <div class="quick-strip">
+      <div class="quick-inner">
+        <div class="quick-item"><b>Real Beard</b>Classic Santa Look</div>
+        <div class="quick-item"><b>Personal</b>Visits Made Special</div>
+        <div class="quick-item"><b>Local</b>Piedmont Triad</div>
       </div>
     </div>
 
     <section id="services">
       <div class="section-inner">
-        <p class="section-kicker">Santa Experiences</p>
-        <h2>A Visit They’ll Remember</h2>
-        <p class="section-intro">From a quick surprise appearance to a full holiday event, Santa Larry can tailor the experience to the people, setting and occasion.</p>
+        <p class="kicker">Santa for every occasion</p>
+        <h2>Santa Visits & Experiences</h2>
+        <p class="intro">From a quick surprise at home to a full holiday event, Santa Larry can help create a memorable experience for children, families, guests, customers and communities.</p>
 
         <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon">⌂</div>
-            <h3>Home & Family Visits</h3>
-            <p>Personal Santa visits for children, families, neighborhoods and private celebrations.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">◉</div>
-            <h3>Photos & Mini Sessions</h3>
-            <p>Santa appearances for photography sessions, holiday portraits and branded photo events.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">★</div>
-            <h3>Corporate Events</h3>
-            <p>Company parties, promotions, customer events, employee celebrations and business gatherings.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">☕</div>
-            <h3>Breakfast with Santa</h3>
-            <p>Breakfasts, brunches and restaurant events with plenty of time for photos and conversation.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">♪</div>
-            <h3>Community Events</h3>
-            <p>Parades, HOA celebrations, senior communities, schools, churches and public holiday events.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">▶</div>
-            <h3>Personalized Videos</h3>
-            <p>Custom Santa messages for children, families, friends, customers and special holiday surprises.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">⌁</div>
-            <h3>Virtual Santa Visits</h3>
-            <p>Convenient virtual experiences when distance or scheduling makes an in-person visit difficult.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-icon">☀</div>
-            <h3>Summer Santa</h3>
-            <p>A little Christmas magic outside December for special promotions, photos and seasonal events.</p>
-          </article>
+          <article class="service-card"><div class="service-icon">⌂</div><h3>Home Visits</h3><p>Personal visits designed to make Christmas feel magical right at home.</p></article>
+          <article class="service-card"><div class="service-icon">★</div><h3>Corporate Events</h3><p>Holiday parties, employee events, customer celebrations and company gatherings.</p></article>
+          <article class="service-card"><div class="service-icon">❄</div><h3>Community Events</h3><p>HOAs, parades, festivals, neighborhood celebrations and public events.</p></article>
+          <article class="service-card"><div class="service-icon">◉</div><h3>Photos with Santa</h3><p>Photo sessions, mini sessions, branding photos and special holiday portraits.</p></article>
+          <article class="service-card"><div class="service-icon">♥</div><h3>Senior Communities</h3><p>Warm, cheerful appearances for senior living communities and holiday programs.</p></article>
+          <article class="service-card"><div class="service-icon">✉</div><h3>Special Deliveries</h3><p>A memorable Santa arrival for gifts, surprises and one-of-a-kind moments.</p></article>
+          <article class="service-card"><div class="service-icon">▶</div><h3>Virtual Visits & Videos</h3><p>Personalized video messages and virtual Santa experiences from near or far.</p></article>
+          <article class="service-card"><div class="service-icon">☀</div><h3>Summer Santa</h3><p>Year-round appearances when your event needs a little Christmas spirit.</p></article>
         </div>
       </div>
     </section>
 
     <section class="about" id="about">
       <div class="section-inner about-grid">
-        <div class="about-photo">
-          <span>Original Santa Larry portrait or wardrobe photo will be placed here after you upload it.</span>
-        </div>
-
+        <img class="about-photo" src="/santa%20larry%202.jpg" alt="Santa Larry at a holiday event" />
         <div class="about-copy">
-          <p class="section-kicker">Meet Santa Larry</p>
-          <h2>Larry Smith</h2>
-          <p>Santa Larry brings a professional, personal approach to every visit. Whether the occasion is an intimate family gathering, a community celebration, a photo session or a multi-hour business event, the goal is simple: create a warm Christmas experience people will remember.</p>
-          <p>Santa Larry serves Winston-Salem, Greensboro, High Point and surrounding communities throughout the Piedmont Triad region.</p>
-
-          <div class="cred-card">
-            <h3>Professional Santa</h3>
-            <div class="cred-list">
-              <div><b>✓</b><span>Natural real-beard Santa presentation</span></div>
-              <div><b>✓</b><span>Professional Santa training and continuing education</span></div>
-              <div><b>✓</b><span>Professional organization memberships and credentials</span></div>
-              <div><b>✓</b><span>Additional credential details can be added as Larry confirms exactly how he wants them displayed.</span></div>
-            </div>
+          <p class="kicker">Meet Santa Larry</p>
+          <h2>More Than a Red Suit</h2>
+          <p>Santa Larry brings warmth, personality and genuine Christmas spirit to every visit. Whether the setting is a family living room, a business event, a community celebration or a photo session, the goal is simple: make the experience feel personal, joyful and memorable.</p>
+          <p>Based in the Piedmont Triad, Santa Larry serves Winston-Salem, Greensboro, High Point and surrounding communities.</p>
+          <div class="mini-points">
+            <div class="mini-point"><b>✓</b><span>Professional, natural real-bearded Santa appearance</span></div>
+            <div class="mini-point"><b>✓</b><span>Flexible experiences for homes, businesses and organizations</span></div>
+            <div class="mini-point"><b>✓</b><span>Call, text or email directly to discuss your event</span></div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="section-inner">
+        <p class="kicker">A little Christmas magic</p>
+        <h2>Santa Larry Gallery</h2>
+        <p class="intro">A look at Santa Larry across visits, events, celebrations and holiday moments.</p>
+        <div class="gallery-grid">
+          <figure><img src="/santa%20larry%203.png" alt="Santa Larry photo 3" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%204.png" alt="Santa Larry photo 4" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%205.jpg" alt="Santa Larry photo 5" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%206.png" alt="Santa Larry photo 6" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%207.jpg" alt="Santa Larry photo 7" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%208.jpg" alt="Santa Larry photo 8" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%209.png" alt="Santa Larry photo 9" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%2010.png" alt="Santa Larry photo 10" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%2011.jpg" alt="Santa Larry photo 11" loading="lazy" /></figure>
+          <figure><img src="/santa%20larry%2013.jpg" alt="Santa Larry photo 13" loading="lazy" /></figure>
         </div>
       </div>
     </section>
 
     <section id="rates">
       <div class="section-inner">
-        <p class="section-kicker">Rates & Reservations</p>
-        <h2>Every Visit Is Different</h2>
-        <p class="section-intro">Rates vary based on the date, location, length of visit and type of event.</p>
-
-        <div class="pricing-card">
-          <h3>Typical Range</h3>
-          <div class="range">$150–$500</div>
-          <p>Rates typically begin around <strong>$150 for a brief drop-in</strong> and may reach <strong>$500 for multi-hour events</strong>. Final pricing is based on the specific request. A <strong>50% retainer is required to reserve the date.</strong></p>
+        <p class="kicker">Simple starting point</p>
+        <h2>Rates & Booking</h2>
+        <p class="intro">Every Santa visit is a little different, so final pricing depends on the date, location, length of visit and type of event.</p>
+        <div class="pricing-wrap">
+          <div class="pricing-card">
+            <h3>Typical Visit Range</h3>
+            <div class="price-range">$150–$500</div>
+            <p>Rates typically range from <strong>$150 for a brief drop-in visit</strong> to <strong>$500 for multi-hour events.</strong></p>
+            <div class="retainer">A 50% retainer is required to reserve your date.</div>
+          </div>
+          <div class="area-card">
+            <h3>Service Area</h3>
+            <p>Santa Larry serves the Piedmont Triad region, including Winston-Salem, Greensboro, High Point and surrounding communities. Have a special location or event in mind? Reach out and tell Santa what you’re planning.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="gallery">
+    <section class="seasonal">
       <div class="section-inner">
-        <p class="section-kicker">Photo Gallery</p>
-        <h2>See Santa Larry</h2>
-        <p class="section-intro">Larry’s original photos will be added here exactly as provided. No enhancement, retouching or AI image modification.</p>
-        <div class="gallery-grid">
-          <div class="gallery-slot">Original Photo 1</div>
-          <div class="gallery-slot">Original Photo 2</div>
-          <div class="gallery-slot">Original Photo 3</div>
-          <div class="gallery-slot">Original Photo 4</div>
-        </div>
+        <p class="kicker">Christmas spirit all year</p>
+        <h2>Summer Santa</h2>
+        <p class="intro">Christmas doesn’t have to wait for December. Santa Larry is available for select summer events, promotions, parties, photo opportunities and special appearances.</p>
+        <div class="seasonal-card"><p>Planning a Christmas-in-July event, business promotion or unique summer celebration? Call, text or email Santa Larry to talk through the idea.</p></div>
       </div>
     </section>
 
     <section class="booking" id="book">
       <div class="section-inner">
-        <p class="section-kicker">Ready for Santa?</p>
-        <h2>Start Your Booking</h2>
-        <p class="section-intro">There is no public calendar at this time. Contact Santa Larry directly to discuss your date, event and visit details.</p>
-
+        <p class="kicker">Ready when you are</p>
+        <h2>Bring Santa Larry to Your Event</h2>
+        <p class="intro">Tell Santa the date, location, type of event and approximate length of visit. He’ll help you work out the details.</p>
         <div class="booking-actions">
           <a class="gold" href="tel:+13364070764">Call Santa</a>
           <a href="sms:+13364070764">Text Santa</a>
           <a href="mailto:Santa@goes2u.com?subject=Santa%20Larry%20Booking%20Request">Email Santa</a>
-          <a href="mailto:info@goes2u.com?subject=Santa%20Larry%20Booking%20Request">Email Info</a>
+          <a href="mailto:info@goes2u.com?subject=Santa%20Larry%20Information%20Request">General Info</a>
         </div>
-
-        <div class="service-area">
-          <strong>Service Area:</strong> Piedmont Triad region, including Winston-Salem, Greensboro, High Point and surrounding communities. GigSalad and Larry’s new booking form can be connected here as soon as those links are finalized.
-        </div>
+        <p class="booking-note">Phone: 336-407-0764 &nbsp;•&nbsp; Santa@goes2u.com &nbsp;•&nbsp; info@goes2u.com</p>
       </div>
     </section>
   </main>
 
-  <footer>
-    <strong>Santa Larry • Larry Smith</strong><br />
+  <footer id="contact">
+    <strong>Santa Larry</strong><br />
     Piedmont Triad, North Carolina<br />
-    336-407-0764 • Santa@goes2u.com • info@goes2u.com
+    <a href="tel:+13364070764">336-407-0764</a> &nbsp;•&nbsp; <a href="mailto:Santa@goes2u.com">Santa@goes2u.com</a><br />
+    Professional Santa visits, events, photos and special experiences.
   </footer>
 
   <nav class="bottom-nav" aria-label="Mobile navigation">
     <a href="#home"><b>⌂</b>Home</a>
-    <a href="#about"><b>★</b>About</a>
-    <a href="#gallery"><b>▦</b>Gallery</a>
-    <a href="#rates"><b>$</b>Rates</a>
-    <a href="#book"><b>✉</b>Contact</a>
+    <a href="#services"><b>★</b>Services</a>
+    <a href="#book"><b>◆</b>Book Santa</a>
+    <a href="#about"><b>♥</b>About</a>
+    <a href="#contact"><b>✉</b>Contact</a>
   </nav>
 </body>
 </html>
