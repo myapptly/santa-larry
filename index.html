@@ -8,407 +8,135 @@
   <title>Santa Larry | Piedmont Triad Santa Visits</title>
   <style>
     :root {
-      --scarlet: #7d1220;
-      --scarlet-dark: #560a13;
-      --scarlet-soft: #9d2634;
-      --green: #173d2b;
-      --green-light: #285640;
-      --gold: #d8ae57;
-      --gold-light: #f1d797;
-      --cream: #fff8e9;
-      --paper: #fffdf8;
-      --ink: #28201c;
-      --muted: #6f625b;
-      --line: #eadcc7;
-      --shadow: 0 18px 48px rgba(59, 27, 17, .14);
+      --scarlet:#7d1220;
+      --scarlet-dark:#560a13;
+      --scarlet-soft:#9d2634;
+      --green:#173d2b;
+      --green-light:#285640;
+      --gold:#d8ae57;
+      --gold-light:#f1d797;
+      --paper:#fffdf8;
+      --ink:#28201c;
+      --muted:#6f625b;
+      --line:#eadcc7;
+      --shadow:0 18px 48px rgba(59,27,17,.14);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      padding-bottom: 78px;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);padding-bottom:78px}
+    a{color:inherit;text-decoration:none}
+    img{display:block;width:100%}
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(86, 10, 19, .97);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,.12);
-    }
-    .topbar-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      min-height: 58px;
-      padding: 10px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    .brand {
-      font-family: Georgia, 'Times New Roman', serif;
-      color: white;
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: .02em;
-    }
-    .brand span { color: var(--gold); font-style: italic; }
-    .top-call {
-      color: white;
-      border: 1px solid rgba(255,255,255,.35);
-      border-radius: 999px;
-      padding: 9px 13px;
-      font-size: .78rem;
-      font-weight: 800;
-    }
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(86,10,19,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)}
+    .topbar-inner{max-width:1160px;margin:0 auto;min-height:58px;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-family:Georgia,'Times New Roman',serif;color:#fff;font-size:1.25rem;font-weight:800;letter-spacing:.02em}
+    .brand span{color:var(--gold);font-style:italic}
+    .top-call{color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 13px;font-size:.78rem;font-weight:800}
 
-    .hero {
-      color: white;
-      background:
-        radial-gradient(circle at 85% 8%, rgba(216,174,87,.24), transparent 28%),
-        linear-gradient(145deg, var(--scarlet-dark), var(--scarlet) 56%, var(--scarlet-soft));
-      overflow: hidden;
-    }
-    .hero-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 24px 18px 32px;
-      display: grid;
-      gap: 24px;
-      align-items: center;
-    }
-    .eyebrow {
-      margin-bottom: 10px;
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: .17em;
-      font-size: .72rem;
-      font-weight: 800;
-    }
-    h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
-    h1 {
-      margin: 0;
-      font-size: clamp(2.8rem, 13vw, 5.4rem);
-      line-height: .9;
-      letter-spacing: -.045em;
-    }
-    h1 span {
-      display: block;
-      margin-top: 12px;
-      color: var(--gold);
-      font-size: .5em;
-      font-style: italic;
-      letter-spacing: 0;
-      line-height: 1.1;
-    }
-    .hero-copy {
-      max-width: 650px;
-      margin: 18px 0 0;
-      color: rgba(255,255,255,.9);
-      font-size: 1rem;
-      line-height: 1.65;
-    }
-    .hero-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 22px;
-    }
-    .btn {
-      min-height: 50px;
-      border-radius: 15px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 12px 14px;
-      font-size: .86rem;
-      font-weight: 900;
-      letter-spacing: .02em;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { background: var(--gold); color: #342310; box-shadow: 0 12px 26px rgba(0,0,0,.18); }
-    .btn-secondary { color: white; border: 1px solid rgba(255,255,255,.38); background: rgba(255,255,255,.08); }
+    .hero{color:#fff;background:radial-gradient(circle at 85% 8%,rgba(216,174,87,.24),transparent 28%),linear-gradient(145deg,var(--scarlet-dark),var(--scarlet) 56%,var(--scarlet-soft));overflow:hidden}
+    .hero-inner{max-width:1160px;margin:0 auto;padding:24px 18px 32px;display:grid;gap:24px;align-items:center}
+    .eyebrow{margin-bottom:10px;color:var(--gold-light);text-transform:uppercase;letter-spacing:.17em;font-size:.72rem;font-weight:800}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif}
+    h1{margin:0;font-size:clamp(2.8rem,10vw,5.4rem);line-height:.9;letter-spacing:-.045em}
+    h1 span{display:block;margin-top:12px;color:var(--gold);font-size:.5em;font-style:italic;letter-spacing:0;line-height:1.1}
+    .hero-copy{max-width:650px;margin:18px 0 0;color:rgba(255,255,255,.9);font-size:1rem;line-height:1.65}
+    .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+    .btn{min-height:50px;border-radius:15px;display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:12px 14px;font-size:.86rem;font-weight:900;letter-spacing:.02em;transition:transform .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--gold);color:#342310;box-shadow:0 12px 26px rgba(0,0,0,.18)}
+    .btn-secondary{color:#fff;border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.08)}
 
-    .hero-photo-wrap {
-      position: relative;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 22px 50px rgba(27,7,10,.28);
-      border: 2px solid rgba(255,255,255,.2);
-      background: #2b1b18;
-    }
-    .hero-photo {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      object-position: center;
-    }
-    .hero-badge {
-      position: absolute;
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      padding: 12px 14px;
-      border-radius: 16px;
-      background: rgba(23,61,43,.93);
-      color: white;
-      box-shadow: 0 8px 24px rgba(0,0,0,.2);
-      font-weight: 800;
-      font-size: .82rem;
-      line-height: 1.4;
-    }
-    .hero-badge span { color: var(--gold-light); }
+    .hero-photo-wrap{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 22px 50px rgba(27,7,10,.28);border:2px solid rgba(255,255,255,.2);background:#2b1b18}
+    .hero-photo{width:100%;height:430px;object-fit:contain;object-position:center top;background:#2b1b18}
+    .hero-badge{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 14px;border-radius:16px;background:rgba(23,61,43,.93);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.2);font-weight:800;font-size:.82rem;line-height:1.4}
+    .hero-badge span{color:var(--gold-light)}
 
-    .quick-strip { background: var(--green); color: white; }
-    .quick-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 14px 18px;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 8px;
-      text-align: center;
-    }
-    .quick-item { font-size: .7rem; line-height: 1.3; font-weight: 800; }
-    .quick-item b { display: block; color: var(--gold); font-size: .98rem; margin-bottom: 3px; }
+    .quick-strip{background:var(--green);color:#fff}
+    .quick-inner{max-width:1160px;margin:0 auto;padding:14px 18px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+    .quick-item{font-size:.7rem;line-height:1.3;font-weight:800}
+    .quick-item b{display:block;color:var(--gold);font-size:.98rem;margin-bottom:3px}
 
-    section { padding: 56px 18px; scroll-margin-top: 62px; }
-    .section-inner { max-width: 1160px; margin: 0 auto; }
-    .kicker {
-      margin: 0 0 8px;
-      color: var(--scarlet);
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-size: .72rem;
-      font-weight: 900;
-    }
-    h2 {
-      margin: 0;
-      color: var(--green);
-      font-size: clamp(2rem, 9vw, 3.8rem);
-      line-height: 1;
-      letter-spacing: -.03em;
-    }
-    .intro {
-      max-width: 720px;
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
+    section{padding:56px 18px;scroll-margin-top:62px}
+    .section-inner{max-width:1160px;margin:0 auto}
+    .kicker{margin:0 0 8px;color:var(--scarlet);text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:900}
+    h2{margin:0;color:var(--green);font-size:clamp(2rem,7vw,3.8rem);line-height:1;letter-spacing:-.03em}
+    .intro{max-width:720px;margin:14px 0 0;color:var(--muted);font-size:1rem;line-height:1.7}
+
+    .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+    .service-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 15px;box-shadow:0 9px 28px rgba(72,43,25,.07);min-height:154px}
+    .service-icon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#f7ead3;color:var(--scarlet);margin-bottom:12px;font-size:1.15rem}
+    .service-card h3{margin:0 0 7px;color:var(--green);font-size:1.03rem;line-height:1.2}
+    .service-card p{margin:0;color:var(--muted);font-size:.83rem;line-height:1.5}
+
+    .about{background:#f6efe2}
+    .about-grid{display:grid;gap:25px;align-items:center}
+    .about-photo{height:390px;object-fit:contain;object-position:center top;border-radius:26px;box-shadow:var(--shadow);background:#e9decf}
+    .about-copy p{color:#514943;font-size:1rem;line-height:1.75}
+    .mini-points{display:grid;gap:10px;margin-top:20px}
+    .mini-point{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.7);border:1px solid #eadbc5;font-size:.9rem;line-height:1.45}
+    .mini-point b{color:var(--scarlet)}
+
+    .gallery{background:var(--paper)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:28px}
+    .gallery-grid figure{margin:0;overflow:hidden;border-radius:18px;background:#eee3d5;display:flex;align-items:center;justify-content:center}
+    .gallery-grid img{height:225px;object-fit:contain;object-position:center top;transition:transform .25s ease;background:#eee3d5}
+    .gallery-grid figure:hover img{transform:scale(1.015)}
+
+    .pricing-wrap{display:grid;gap:18px;margin-top:28px}
+    .pricing-card{padding:25px;border-radius:26px;background:linear-gradient(145deg,var(--green),var(--green-light));color:#fff;box-shadow:var(--shadow)}
+    .pricing-card h3{margin:0 0 8px;color:var(--gold);font-size:1.55rem}
+    .price-range{margin:8px 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:2.5rem;font-weight:800}
+    .pricing-card p{margin:0;color:rgba(255,255,255,.86);line-height:1.65;font-size:.94rem}
+    .retainer{margin-top:18px;padding:14px;border-radius:15px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.17);font-weight:800;color:#fff}
+    .area-card{padding:24px;border-radius:26px;background:#fff;border:1px solid var(--line);box-shadow:0 9px 28px rgba(72,43,25,.07)}
+    .area-card h3{margin:0 0 10px;color:var(--scarlet);font-size:1.45rem}
+    .area-card p{margin:0;color:var(--muted);line-height:1.7;font-size:.94rem}
+
+    .seasonal{background:linear-gradient(rgba(23,61,43,.9),rgba(23,61,43,.9)),url('/santa%20larry%2012.png') center/cover;color:#fff}
+    .seasonal .kicker{color:var(--gold-light)}
+    .seasonal h2{color:#fff}
+    .seasonal .intro{color:rgba(255,255,255,.84)}
+    .seasonal-card{margin-top:24px;max-width:720px;padding:22px;border-radius:22px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(4px)}
+    .seasonal-card p{margin:0;font-size:.95rem;line-height:1.7}
+
+    .booking{color:#fff;background:linear-gradient(145deg,var(--scarlet-dark),var(--scarlet-soft))}
+    .booking .kicker{color:var(--gold-light)}
+    .booking h2{color:#fff}
+    .booking .intro{color:rgba(255,255,255,.84)}
+    .booking-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+    .booking-actions a{min-height:54px;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;border-radius:15px;background:#fff;color:var(--scarlet-dark);font-size:.86rem;font-weight:900}
+    .booking-actions a.gold{background:var(--gold);color:#342310}
+    .booking-note{margin-top:18px;color:rgba(255,255,255,.78);font-size:.82rem;line-height:1.55}
+
+    footer{padding:34px 18px 100px;text-align:center;background:#1d2f27;color:rgba(255,255,255,.72);font-size:.83rem;line-height:1.7}
+    footer strong{color:#fff}
+    footer a{color:var(--gold-light)}
+
+    .bottom-nav{position:fixed;z-index:60;left:0;right:0;bottom:0;min-height:70px;display:grid;grid-template-columns:repeat(5,1fr);padding:7px 5px max(7px,env(safe-area-inset-bottom));background:rgba(255,253,248,.97);border-top:1px solid #e5d8c4;box-shadow:0 -8px 24px rgba(50,30,20,.09)}
+    .bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#5e544e;font-size:.64rem;font-weight:800}
+    .bottom-nav b{color:var(--scarlet);font-size:1rem}
+
+    @media (min-width:760px){
+      body{padding-bottom:0}
+      .hero-inner{grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);padding-top:48px;padding-bottom:48px}
+      .hero-inner>div{min-width:0}
+      .hero-photo{height:520px}
+      h1{font-size:clamp(3.5rem,6.5vw,5.4rem)}
+      .services-grid{grid-template-columns:repeat(4,1fr)}
+      .about-grid{grid-template-columns:.9fr 1.1fr}
+      .gallery-grid{grid-template-columns:repeat(4,1fr)}
+      .gallery-grid img{height:270px}
+      .pricing-wrap{grid-template-columns:1fr 1fr}
+      .booking-actions{grid-template-columns:repeat(4,1fr)}
+      .bottom-nav{display:none}
+      footer{padding-bottom:36px}
     }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 28px;
-    }
-    .service-card {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 18px 15px;
-      box-shadow: 0 9px 28px rgba(72,43,25,.07);
-      min-height: 154px;
-    }
-    .service-icon {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border-radius: 12px;
-      background: #f7ead3;
-      color: var(--scarlet);
-      margin-bottom: 12px;
-      font-size: 1.15rem;
-    }
-    .service-card h3 { margin: 0 0 7px; color: var(--green); font-size: 1.03rem; line-height: 1.2; }
-    .service-card p { margin: 0; color: var(--muted); font-size: .83rem; line-height: 1.5; }
-
-    .about { background: #f6efe2; }
-    .about-grid { display: grid; gap: 25px; align-items: center; }
-    .about-photo {
-      height: 390px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 26px;
-      box-shadow: var(--shadow);
-    }
-    .about-copy p { color: #514943; font-size: 1rem; line-height: 1.75; }
-    .mini-points { display: grid; gap: 10px; margin-top: 20px; }
-    .mini-point {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.7);
-      border: 1px solid #eadbc5;
-      font-size: .9rem;
-      line-height: 1.45;
-    }
-    .mini-point b { color: var(--scarlet); }
-
-    .gallery { background: var(--paper); }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 10px;
-      margin-top: 28px;
-    }
-    .gallery-grid figure { margin: 0; overflow: hidden; border-radius: 18px; background: #eee3d5; }
-    .gallery-grid img { height: 225px; object-fit: cover; object-position: center; transition: transform .25s ease; }
-    .gallery-grid figure:hover img { transform: scale(1.025); }
-
-    .pricing-wrap { display: grid; gap: 18px; margin-top: 28px; }
-    .pricing-card {
-      padding: 25px;
-      border-radius: 26px;
-      background: linear-gradient(145deg, var(--green), var(--green-light));
-      color: white;
-      box-shadow: var(--shadow);
-    }
-    .pricing-card h3 { margin: 0 0 8px; color: var(--gold); font-size: 1.55rem; }
-    .price-range { margin: 8px 0 12px; font-family: Georgia, 'Times New Roman', serif; font-size: 2.5rem; font-weight: 800; }
-    .pricing-card p { margin: 0; color: rgba(255,255,255,.86); line-height: 1.65; font-size: .94rem; }
-    .retainer {
-      margin-top: 18px;
-      padding: 14px;
-      border-radius: 15px;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.17);
-      font-weight: 800;
-      color: white;
-    }
-    .area-card {
-      padding: 24px;
-      border-radius: 26px;
-      background: white;
-      border: 1px solid var(--line);
-      box-shadow: 0 9px 28px rgba(72,43,25,.07);
-    }
-    .area-card h3 { margin: 0 0 10px; color: var(--scarlet); font-size: 1.45rem; }
-    .area-card p { margin: 0; color: var(--muted); line-height: 1.7; font-size: .94rem; }
-
-    .seasonal {
-      background:
-        linear-gradient(rgba(23,61,43,.9), rgba(23,61,43,.9)),
-        url('/santa%20larry%2012.png') center/cover;
-      color: white;
-    }
-    .seasonal .kicker { color: var(--gold-light); }
-    .seasonal h2 { color: white; }
-    .seasonal .intro { color: rgba(255,255,255,.84); }
-    .seasonal-card {
-      margin-top: 24px;
-      max-width: 720px;
-      padding: 22px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.09);
-      border: 1px solid rgba(255,255,255,.18);
-      backdrop-filter: blur(4px);
-    }
-    .seasonal-card p { margin: 0; font-size: .95rem; line-height: 1.7; }
-
-    .booking {
-      color: white;
-      background: linear-gradient(145deg, var(--scarlet-dark), var(--scarlet-soft));
-    }
-    .booking .kicker { color: var(--gold-light); }
-    .booking h2 { color: white; }
-    .booking .intro { color: rgba(255,255,255,.84); }
-    .booking-actions {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 26px;
-    }
-    .booking-actions a {
-      min-height: 54px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 12px;
-      border-radius: 15px;
-      background: white;
-      color: var(--scarlet-dark);
-      font-size: .86rem;
-      font-weight: 900;
-    }
-    .booking-actions a.gold { background: var(--gold); color: #342310; }
-    .booking-note {
-      margin-top: 18px;
-      color: rgba(255,255,255,.78);
-      font-size: .82rem;
-      line-height: 1.55;
-    }
-
-    footer {
-      padding: 34px 18px 100px;
-      text-align: center;
-      background: #1d2f27;
-      color: rgba(255,255,255,.72);
-      font-size: .83rem;
-      line-height: 1.7;
-    }
-    footer strong { color: white; }
-    footer a { color: var(--gold-light); }
-
-    .bottom-nav {
-      position: fixed;
-      z-index: 60;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      min-height: 70px;
-      display: grid;
-      grid-template-columns: repeat(5,1fr);
-      padding: 7px 5px max(7px, env(safe-area-inset-bottom));
-      background: rgba(255,253,248,.97);
-      border-top: 1px solid #e5d8c4;
-      box-shadow: 0 -8px 24px rgba(50,30,20,.09);
-    }
-    .bottom-nav a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 3px;
-      color: #5e544e;
-      font-size: .64rem;
-      font-weight: 800;
-    }
-    .bottom-nav b { color: var(--scarlet); font-size: 1rem; }
-
-    @media (min-width: 760px) {
-      body { padding-bottom: 0; }
-      .hero-inner { grid-template-columns: 1.02fr .98fr; padding-top: 48px; padding-bottom: 48px; }
-      .hero-photo { height: 520px; }
-      .services-grid { grid-template-columns: repeat(4,1fr); }
-      .about-grid { grid-template-columns: .9fr 1.1fr; }
-      .gallery-grid { grid-template-columns: repeat(4,1fr); }
-      .gallery-grid img { height: 270px; }
-      .pricing-wrap { grid-template-columns: 1fr 1fr; }
-      .booking-actions { grid-template-columns: repeat(4,1fr); }
-      .bottom-nav { display: none; }
-      footer { padding-bottom: 36px; }
-    }
-
-    @media (min-width: 1100px) {
-      section { padding-top: 76px; padding-bottom: 76px; }
-      .gallery-grid { grid-template-columns: repeat(5,1fr); }
-      .gallery-grid img { height: 290px; }
+    @media (min-width:1100px){
+      section{padding-top:76px;padding-bottom:76px}
+      .gallery-grid{grid-template-columns:repeat(5,1fr)}
+      .gallery-grid img{height:290px}
     }
   </style>
 </head>
@@ -454,7 +182,6 @@
         <p class="kicker">Santa for every occasion</p>
         <h2>Santa Visits & Experiences</h2>
         <p class="intro">From a quick surprise at home to a full holiday event, Santa Larry can help create a memorable experience for children, families, guests, customers and communities.</p>
-
         <div class="services-grid">
           <article class="service-card"><div class="service-icon">⌂</div><h3>Home Visits</h3><p>Personal visits designed to make Christmas feel magical right at home.</p></article>
           <article class="service-card"><div class="service-icon">★</div><h3>Corporate Events</h3><p>Holiday parties, employee events, customer celebrations and company gatherings.</p></article>
