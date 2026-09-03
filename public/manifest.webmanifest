@@ -1,0 +1,16 @@
+{
+  "name": "Santa Larry",
+  "short_name": "Santa Larry",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#6b0f1a",
+  "icons": [
+    {
+      "src": "/Screenshot_20260903-185652.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
