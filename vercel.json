@@ -1,24 +1,10 @@
 {
   "version": 2,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Link",
-          "value": "</Screenshot_20260903-185652.png>; rel=\"icon\"; type=\"image/png\", </Screenshot_20260903-185652.png>; rel=\"apple-touch-icon\", </manifest.webmanifest>; rel=\"manifest\""
-        }
-      ]
-    }
-  ],
   "routes": [
-    {
-      "src": "/(.*\\.(?:png|jpg|jpeg|webp|gif|svg|ico|webmanifest))$",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+    { "src": "/admin.html", "dest": "/admin.html" },
+    { "src": "/admin", "dest": "/admin.html" },
+    { "src": "/(.*\\.(png|jpg|jpeg|webp|gif|svg|ico|webmanifest))", "dest": "/public/$1" },
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
