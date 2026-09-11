@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Santa Larry | Digital Business Card</title>
+<style>
+:root{--green:#315c59;--deep:#173f39;--cream:#fffaf0;--gold:#d7b255;--red:#c9232d;--ink:#153f39}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#173f39,#315c59);font-family:Arial,Helvetica,sans-serif;padding:24px;color:var(--ink)}
+.card{width:min(430px,100%);background:var(--cream);border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.35)}
+.hero{position:relative;background:#244c45;padding:26px 26px 28px;text-align:center;color:white}.hero img{width:126px;height:126px;border-radius:50%;object-fit:cover;object-position:center 20%;margin:0 auto 14px;border:5px solid var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.hero h1{margin:0;font-size:2rem}.hero p{margin:7px 0 0;color:#f6e8b3;font-weight:700;line-height:1.4}.body{padding:24px}.tagline{text-align:center;font-size:1rem;line-height:1.55;margin:0 0 20px;color:#4d625e}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.btn{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:13px;text-decoration:none;font-weight:800;padding:10px 12px;text-align:center}.red{background:var(--red);color:#fff}.green{background:var(--deep);color:#fff}.gold{background:var(--gold);color:#173f39}.outline{border:2px solid var(--deep);color:var(--deep);background:white}.wide{grid-column:1/-1}.footer{text-align:center;padding:0 24px 24px;color:#65746f;font-size:.86rem}.footer strong{color:var(--deep)}
+</style>
+</head>
+<body>
+<main class="card">
+  <section class="hero">
+    <img src="/santa%20thumbnail.png" alt="Santa Larry">
+    <h1>Santa Larry</h1>
+    <p>Professional Real-Bearded Santa<br>North Carolina Piedmont Triad</p>
+  </section>
+  <section class="body">
+    <p class="tagline">Private family visits, photography sessions, corporate events, community appearances, special deliveries and more.</p>
+    <div class="actions">
+      <a class="btn red" href="tel:+13364070764">📞 Call Santa</a>
+      <a class="btn green" href="sms:+13364070764">💬 Text Santa</a>
+      <a class="btn gold" href="mailto:Santa@goes2u.com">✉️ Email</a>
+      <a class="btn outline" href="https://santa.goes2u.com" target="_blank" rel="noopener">🌐 Website</a>
+      <a class="btn red wide" href="/availability">🎅 Check Availability</a>
+      <a class="btn green wide" href="/letters">💌 Letters to Santa</a>
+    </div>
+  </section>
+  <div class="footer"><strong>Santa Goes To You</strong><br>336-407-0764 · Santa@goes2u.com</div>
+</main>
+</body>
+</html>
