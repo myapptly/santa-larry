@@ -3,6 +3,8 @@
   "routes": [
     { "src": "/admin.html", "dest": "/admin.html" },
     { "src": "/admin", "dest": "/admin.html" },
+    { "src": "/letters.html", "dest": "/letters.html" },
+    { "src": "/letters", "dest": "/letters.html" },
     { "src": "/(.*\\.(png|jpg|jpeg|webp|gif|svg|ico|webmanifest))", "dest": "/public/$1" },
     { "src": "/", "dest": "/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
