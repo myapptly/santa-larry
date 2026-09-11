@@ -7,6 +7,8 @@
     { "src": "/letters", "dest": "/letters.html" },
     { "src": "/availability.html", "dest": "/availability.html" },
     { "src": "/availability", "dest": "/availability.html" },
+    { "src": "/business-card.html", "dest": "/business-card.html" },
+    { "src": "/card", "dest": "/business-card.html" },
     { "src": "/(.*\\.(png|jpg|jpeg|webp|gif|svg|ico|webmanifest))", "dest": "/public/$1" },
     { "src": "/", "dest": "/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
