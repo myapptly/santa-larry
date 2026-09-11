@@ -5,6 +5,8 @@
     { "src": "/admin", "dest": "/admin.html" },
     { "src": "/letters.html", "dest": "/letters.html" },
     { "src": "/letters", "dest": "/letters.html" },
+    { "src": "/availability.html", "dest": "/availability.html" },
+    { "src": "/availability", "dest": "/availability.html" },
     { "src": "/(.*\\.(png|jpg|jpeg|webp|gif|svg|ico|webmanifest))", "dest": "/public/$1" },
     { "src": "/", "dest": "/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
