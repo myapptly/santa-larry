@@ -10,7 +10,7 @@
       "src": "/santa%20thumbnail.png",
       "sizes": "any",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "maskable"
     }
   ]
 }
