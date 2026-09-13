@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#173f39">
+<title>Santa Larry | Digital Business Card</title>
+<style>
+:root{--green:#315c59;--deep:#173f39;--cream:#fffaf0;--gold:#d7b255;--red:#c9232d;--ink:#153f39}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%}body{min-height:100dvh;display:grid;place-items:center;background:linear-gradient(145deg,#173f39,#315c59);font-family:Arial,Helvetica,sans-serif;padding:10px;color:var(--ink)}
+.card{width:min(430px,100%);background:var(--cream);border-radius:24px;overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.35)}
+.hero{background:#244c45;padding:14px 18px 16px;text-align:center;color:white}.hero img{width:92px;height:92px;border-radius:50%;object-fit:cover;object-position:center 20%;margin:0 auto 8px;border:4px solid var(--gold);box-shadow:0 6px 18px rgba(0,0,0,.24)}
+.hero h1{margin:0;font-size:1.75rem}.hero p{margin:5px 0 0;color:#f6e8b3;font-size:.83rem;font-weight:700;line-height:1.3}.body{padding:14px}.tagline{text-align:center;font-size:.85rem;line-height:1.4;margin:0 0 12px;color:#4d625e}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}.btn{display:flex;align-items:center;justify-content:center;min-height:45px;border-radius:12px;text-decoration:none;font-weight:800;padding:8px 10px;text-align:center;border:0;font:inherit;cursor:pointer}.red{background:var(--red);color:#fff}.green{background:var(--deep);color:#fff}.gold{background:var(--gold);color:#173f39}.outline{border:2px solid var(--deep);color:var(--deep);background:white}.wide{grid-column:1/-1}.share-status{text-align:center;min-height:16px;margin:7px 0 0;color:#65746f;font-size:.75rem}.install{margin-top:10px;background:#fff;border:1px solid #ded6c8;border-radius:14px;padding:10px 12px}.install h2{margin:0 0 5px;text-align:center;font-size:.98rem;color:var(--deep)}.install p{margin:0;color:#53635f;font-size:.75rem;line-height:1.35;text-align:center}.footer{text-align:center;padding:0 14px 12px;color:#65746f;font-size:.75rem}.footer strong{color:var(--deep)}.apptly{margin-top:5px;font-size:.7rem}.apptly a{color:var(--deep);font-weight:800;text-decoration:none}
+@media(max-height:780px){body{place-items:start center}.hero{padding:10px 16px 12px}.hero img{width:78px;height:78px}.body{padding:10px 12px}.tagline{font-size:.78rem;margin-bottom:9px}.btn{min-height:41px;font-size:.86rem}.install{padding:8px 10px}.footer{padding-bottom:9px}}
+</style>
+</head>
+<body>
+<main class="card">
+  <section class="hero">
+    <img src="https://santalarry.goes2u.com/santa%20thumbnail.png" alt="Santa Larry">
+    <h1>Santa Larry</h1>
+    <p>Professional Real-Bearded Santa<br>North Carolina Piedmont Triad</p>
+  </section>
+  <section class="body">
+    <p class="tagline">Private family visits, photography sessions, corporate events, community appearances, special deliveries and more.</p>
+    <div class="actions">
+      <a class="btn red" href="tel:+13364070764">📞 Call Santa</a>
+      <a class="btn green" href="sms:+13364070764">💬 Text Santa</a>
+      <a class="btn gold" href="mailto:Santa@goes2u.com">✉️ Email</a>
+      <a class="btn outline" href="https://santa.goes2u.com" target="_blank" rel="noopener">🌐 Website</a>
+      <a class="btn red wide" href="https://santalarry.goes2u.com/availability" target="_blank" rel="noopener">🎅 Check Availability</a>
+      <a class="btn green wide" href="https://santalarry.goes2u.com/letters" target="_blank" rel="noopener">💌 Letters to Santa</a>
+      <button class="btn gold wide" id="shareCardBtn" type="button">↗ Share Santa Larry's Card</button>
+    </div>
+    <p class="share-status" id="shareStatus"></p>
+    <section class="install">
+      <h2>📱 Keep Santa Larry on Your Phone</h2>
+      <p>Open this card in Safari or Chrome, then use Add to Home Screen. This card is separate from the Santa Larry app, so both can stay on your phone.</p>
+    </section>
+  </section>
+  <div class="footer"><strong>Santa Goes To You</strong><br>336-407-0764 · Santa@goes2u.com<div class="apptly"><a href="https://www.myapptly.com" target="_blank" rel="noopener">Built by APPTLY</a></div></div>
+</main>
+<script>
+const shareBtn=document.getElementById('shareCardBtn');
+const shareStatus=document.getElementById('shareStatus');
+const cardUrl=window.location.origin + window.location.pathname;
+shareBtn?.addEventListener('click',async()=>{
+  try{
+    if(navigator.share){await navigator.share({title:'Santa Larry',text:"Here is Santa Larry's digital business card.",url:cardUrl});}
+    else if(navigator.clipboard){await navigator.clipboard.writeText(cardUrl);shareStatus.textContent='Card link copied!';}
+    else{shareStatus.textContent=cardUrl;}
+  }catch(e){}
+});
+</script>
+</body>
+</html>
