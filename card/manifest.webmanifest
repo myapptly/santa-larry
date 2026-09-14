@@ -1,6 +1,6 @@
 {
-  "name": "Santa Larry Digital Business Card",
-  "short_name": "Santa Larry",
+  "name": "Santa Card",
+  "short_name": "Santa Card",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
