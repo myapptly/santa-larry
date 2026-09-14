@@ -1,0 +1,16 @@
+{
+  "name": "Santa Larry Business Card",
+  "short_name": "Santa Larry",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#173f39",
+  "theme_color": "#315c59",
+  "icons": [
+    {
+      "src": "/santa%20thumbnail.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
