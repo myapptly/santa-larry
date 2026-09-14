@@ -3,7 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#315c59">
 <title>Santa Larry | Digital Business Card</title>
+<link rel="manifest" href="/card-manifest.webmanifest">
+<link rel="icon" type="image/png" href="/santa%20thumbnail.png">
+<link rel="apple-touch-icon" href="/santa%20thumbnail.png">
 <style>
 :root{--green:#315c59;--deep:#173f39;--cream:#fffaf0;--gold:#d7b255;--red:#c9232d;--ink:#153f39}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(145deg,#173f39,#315c59);font-family:Arial,Helvetica,sans-serif;padding:24px;color:var(--ink)}
@@ -47,7 +51,7 @@
   <div class="footer"><strong>Santa Goes To You</strong><br>336-407-0764 · Santa@goes2u.com<div class="apptly"><a href="https://www.myapptly.com" target="_blank" rel="noopener">Built by APPTLY</a></div></div>
 </main>
 <script>
-const cardUrl='https://santalarry.goes2u.com/card';
+const cardUrl='https://santacard.goes2u.com';
 const shareBtn=document.getElementById('shareCardBtn');
 const shareStatus=document.getElementById('shareStatus');
 shareBtn?.addEventListener('click',async()=>{
